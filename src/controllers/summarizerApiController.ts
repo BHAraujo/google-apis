@@ -1,4 +1,4 @@
-import type { SummarizerApi } from "../service/summarizerApi.js";
+import type { SummarizerApi } from "../services/summarizerApi.js";
 import type { SummarizerApiView } from "../views/summarizerApiView.js";
 
 
@@ -14,8 +14,12 @@ export class SummarizerApiController {
     }
 
     async submitPrompt(){
-        this.view.onFormSubmit(async (event)=> {
+        if(document.querySelector('#summarizer-api-form')) {
+        
+            this.view.onFormSubmit(async (event)=> {
+        
             event.preventDefault()
+        
             this.view.setStatusOutput("Waiting for the prompt...")
             this.view.setSummarizerOutput('')
             this.view.setStatusOutput("Thinking for the answer...")
@@ -26,5 +30,6 @@ export class SummarizerApiController {
                 this.view.setSummarizerOutput(await this.summarizerApi.sendPrompt(this.prompt))
             }, 1000); 
         })
+        }
     }
 }

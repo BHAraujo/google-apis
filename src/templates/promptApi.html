@@ -75,7 +75,7 @@
     <h1>Prompt API</h1>
     <p class="sub"></p>
 
-    <form id="prompt-form">
+    <form id="prompt-api-form">
     
       <div class="field">
         <label for="promptApi">É a mais genérica. Você conversa livremente com o modelo, como num chat:
@@ -83,7 +83,7 @@
       </label>
 
         <div class="unit">
-          <input id="promptApi" name="promptApi" type="text" required>
+          <input id="prompt-api-input" name="promptApi" type="text" required>
           <span> </span>
         </div>
       </div>
@@ -98,13 +98,14 @@
     
     <h2><output id="statusOutput"> Waiting for the prompt...</output></h2>
 
-    <h2><output id="promptOutput"> </output></h2></br>
+    <h2><output id="prompt-api-output"> </output></h2></br>
 
     </div>
   
   </main>
  
-  <script type="module" src="../../dist/index.js"></script>
+  <script type="module" src="../../dist/scripts/promptApiScript.js"></script>
 
 </body>
 </html>
+ 

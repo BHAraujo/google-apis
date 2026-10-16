@@ -1,0 +1,1 @@
+export type Availability = 'unavailable' | 'downloadable' | 'downloading' | 'available' | 'undefined';

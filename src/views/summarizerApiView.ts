@@ -6,8 +6,8 @@ export class SummarizerApiView {
 
     constructor() {
         this.statusOutput = document.querySelector<HTMLOutputElement>('#statusOutput')!;
-        this.summarizerOutput = document.querySelector<HTMLOutputElement>('#summarizerOutput')!;
-        this.form = document.querySelector<HTMLFormElement>('#summarizer-form')!;
+        this.summarizerOutput = document.querySelector<HTMLOutputElement>('#summarizer-api-output')!;
+        this.form = document.querySelector<HTMLFormElement>('#summarizer-api-form')!;
     }
 
     onFormSubmit(handler: (event: SubmitEvent) => void) {
@@ -15,7 +15,7 @@ export class SummarizerApiView {
     }
     
     getSummarizerInput():string {
-        return this.form.querySelector<HTMLInputElement>('#summarizerApi')!.value
+        return this.form.querySelector<HTMLInputElement>('#summarizer-api-textarea')!.value
     }
 
     setStatusOutput(text: string | any) {

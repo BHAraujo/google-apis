@@ -1,4 +1,4 @@
-import type { PromptApi } from "../service/promptApi.js";
+import type { PromptApi } from "../services/promptApi.js";
 import type { PromptApiView } from "../views/promptApiView.js";
 
 
@@ -14,8 +14,11 @@ export class PromptApiController {
     }
 
     async submitPrompt(){
-        this.view.onFormSubmit(async (event)=> {
+    
+            this.view.onFormSubmit(async (event)=> {
+            
             event.preventDefault()
+            
             this.view.setStatusOutput("Waiting for the prompt...")
             this.view.setPromptOutput('')
             this.view.setStatusOutput("Thinking for the answer...")
@@ -25,7 +28,9 @@ export class PromptApiController {
                 this.view.setStatusOutput('')
                 this.view.setPromptOutput(await this.promptApi.sendPrompt(this.prompt))
             }, 1000); 
+
         })
+        
     }
 
     displayPrompt(){

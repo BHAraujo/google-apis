@@ -1,4 +1,5 @@
-export type Availability = 'unavailable' | 'downloadable' | 'downloading' | 'available' | 'undefined';
+import type {Availability} from '../types/generalTypes.js'
+
 
 const options = {
 sharedContext: 'These are requests to summarize news from a sports websites. The users expect a response in English.',

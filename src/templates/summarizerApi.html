@@ -74,7 +74,7 @@
     <h1>Summarizer</h1>
     <p class="sub"></p>
 
-    <form id="summarizer-form">
+    <form id="summarizer-api-form">
     
       <div class="field">
         <label for="summarizerApi">Resume um texto. Você passa um conteúdo longo e ele devolve uma versão condensada. Dá para escolher o tipo de resumo
@@ -83,7 +83,7 @@
       </label>
 
         <div class="unit">
-          <textarea id="summarizerApi" name="summarizerApi" type="text" required></textarea>
+          <textarea id="summarizer-api-textarea" name="summarizerApi" type="text" required></textarea>
           <span> </span>
         </div>
       </div>
@@ -98,13 +98,13 @@
     
     <h2><output id="statusOutput"> Waiting for the prompt...</output></h2>
 
-    <h2><output id="summarizerOutput"> </output></h2></br>
+    <h2><output id="summarizer-api-output"> </output></h2></br>
 
     </div>
   
   </main>
  
-  <script type="module" src="../../dist/index.js"></script>
+  <script type="module" src="../../dist/scripts/summarizerApiScript.js"></script>
 
-</body>
+</body> 
 </html>

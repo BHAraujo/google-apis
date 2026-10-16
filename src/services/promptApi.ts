@@ -1,4 +1,4 @@
-export type Availability = 'unavailable' | 'downloadable' | 'downloading' | 'available' | 'undefined';
+import type {Availability} from '../types/generalTypes.js'
 
 
 const initialPrompts: [LanguageModelSystemMessage, ...LanguageModelMessage[]] = [

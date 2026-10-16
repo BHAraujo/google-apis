@@ -6,8 +6,8 @@ export class PromptApiView {
 
     constructor() {
         this.statusOutput = document.querySelector<HTMLOutputElement>('#statusOutput')!;
-        this.promptOutput = document.querySelector<HTMLOutputElement>('#promptOutput')!;
-        this.form = document.querySelector<HTMLFormElement>('#prompt-form')!;
+        this.promptOutput = document.querySelector<HTMLOutputElement>('#prompt-api-output')!;
+        this.form = document.querySelector<HTMLFormElement>('#prompt-api-form')!;
     }
 
     onFormSubmit(handler: (event: SubmitEvent) => void) {
@@ -15,9 +15,8 @@ export class PromptApiView {
     }
     
     getPromptInput():string {
-        return this.form.querySelector<HTMLInputElement>('#promptApi')!.value
+        return this.form.querySelector<HTMLInputElement>('#prompt-api-input')!.value
     }
-
 
     setStatusOutput(text: string | any) {
         this.statusOutput.textContent = text;
