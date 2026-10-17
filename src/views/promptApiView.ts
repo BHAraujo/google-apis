@@ -3,7 +3,7 @@ export class PromptApiView {
     private statusOutput: HTMLOutputElement;
     private promptOutput: HTMLOutputElement;
     
-
+    
     constructor() {
         this.statusOutput = document.querySelector<HTMLOutputElement>('#statusOutput')!;
         this.promptOutput = document.querySelector<HTMLOutputElement>('#prompt-api-output')!;

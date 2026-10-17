@@ -15,5 +15,4 @@ import { LanguageDetectorApiView } from "../views/languageDetectorApiView.js";
     await Promise.all([    
     languageDetectorApi.healthCheck().then(()=> languageDetectorController.submitPrompt()),
     ]) 
-    
 })();

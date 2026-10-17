@@ -8,13 +8,13 @@ import { PromptApiView } from "../views/promptApiView.js";
     
     // Starting view 
     const promptView = new PromptApiView()
+
     // Starting Prompt Controller
     const promptController = new PromptApiController(promptView, promptApi)
 
     await Promise.all([
     promptApi.healthCheck().then(()=> promptController.submitPrompt()),
-]) 
-    
+    ]) 
 })();
 
 

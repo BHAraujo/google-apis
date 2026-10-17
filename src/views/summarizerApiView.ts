@@ -25,7 +25,5 @@ export class SummarizerApiView {
     setSummarizerOutput(text: string | any) {
         this.summarizerOutput.textContent = text;
     }
-
-
 }
 

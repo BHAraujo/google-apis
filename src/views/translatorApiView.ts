@@ -23,7 +23,7 @@ export class TranslatorApiView {
         this.statusOutput.textContent = text;
     }
 
-    seTranslatorOutput(text: string | any) {
+    setTranslatorOutput(text: string | any) {
         this.translatorApiOutput.textContent = text;
     }
 }

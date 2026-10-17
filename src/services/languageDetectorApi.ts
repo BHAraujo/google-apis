@@ -6,7 +6,7 @@ export class LanguageDetectorApi {
     private session!: LanguageDetector
     
 
-   async healthCheck() {
+    async healthCheck() {
         try {
             this.availability = await LanguageDetector.availability()
 

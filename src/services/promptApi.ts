@@ -14,7 +14,7 @@ export class PromptApi {
     private availability: Availability = 'undefined'
     private session!: LanguageModel
 
-   async healthCheck() {
+    async healthCheck() {
         try {
             this.availability = await LanguageModel.availability()
 

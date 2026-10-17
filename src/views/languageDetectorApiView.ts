@@ -3,7 +3,6 @@ export class LanguageDetectorApiView {
     private statusOutput: HTMLOutputElement;
     private languageDetectorOutput: HTMLOutputElement;
     
-
     constructor() {
         this.statusOutput = document.querySelector<HTMLOutputElement>('#statusOutput')!;
         this.languageDetectorOutput = document.querySelector<HTMLOutputElement>('#language-detector-output')!;

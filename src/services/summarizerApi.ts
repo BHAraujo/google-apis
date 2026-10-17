@@ -16,7 +16,7 @@ export class SummarizerApi {
     private availability: Availability = 'undefined'
     private session!: Summarizer    
 
-   async healthCheck() {
+    async healthCheck() {
         try {
             this.availability = await Summarizer.availability()
 
@@ -51,8 +51,6 @@ export class SummarizerApi {
         } catch (error) {
             return error
         }
-        
     }
-
 }
 
